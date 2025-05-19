@@ -2,6 +2,7 @@
 
 class BLH_Admin_Bar_Padding {
     public static function init() {
+	
         add_action('wp_footer', [__CLASS__, 'inject_admin_bar_script'], 100);
     }
 

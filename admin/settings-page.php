@@ -21,8 +21,8 @@ function blh_render_settings_page() {
                     <th scope="row">Push content for admin bar</th>
                     <td>
                         <label>
-                            <input type="checkbox" name="<?php echo $option_key; ?>[]" value="admin_bar_padding"
-                                <?php checked(in_array('admin_bar_padding', $active_helpers)); ?>>
+                            <input type="checkbox" name="<?php echo $option_key; ?>[]" value="admin-bar-padding"
+                                <?php checked(in_array('admin-bar-padding', $active_helpers)); ?>>
                             Enable
                         </label>
                     </td>
