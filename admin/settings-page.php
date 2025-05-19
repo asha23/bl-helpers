@@ -18,7 +18,7 @@ function blh_render_settings_page() {
             <?php settings_fields('blh_options'); ?>
             <table class="form-table">
                 <tr>
-                    <th scope="row">Push content for admin bar</th>
+                    <th scope="row">Admin Bar Padding Helper</th>
                     <td>
                         <label>
                             <input type="checkbox" name="<?php echo $option_key; ?>[]" value="admin-bar-padding"
