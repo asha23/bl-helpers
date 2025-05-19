@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: BrightLocal Helpers
+ * Plugin Name: BrightLocal - Helpers
  * Description: A collection of optional frontend and backend tweaks for BrightLocal
  * Version: 1.0.0
  * Author: Ash Whiting for BrightLocal
