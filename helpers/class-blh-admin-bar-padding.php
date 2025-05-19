@@ -16,6 +16,9 @@ class BLH_Admin_Bar_Padding {
             header.fixed {
                 top: <?php echo $admin_bar_height; ?>px !important;
             }
+			body {
+				margin-top: <?php echo $admin_bar_height; ?>px !important;
+			}
             @media screen and (max-width: 782px) {
                 body {
                     margin-top: 46px !important;
