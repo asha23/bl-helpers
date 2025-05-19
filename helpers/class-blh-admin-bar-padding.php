@@ -7,13 +7,15 @@ class BLH_Admin_Bar_Padding {
 
     public static function add_admin_bar_css() {
         if (!is_admin_bar_showing()) {
+			echo "admin not showing";
             return;
         }
 
         $admin_bar_height = is_admin() ? 0 : (wp_is_mobile() ? 46 : 32);
         ?>
-        <style>
-            header.fixed {
+		admin showing.
+        <style id="bl-helpers-admin-bar-padding">
+            header {
                 top: 32px !important;
             }
 			body {
