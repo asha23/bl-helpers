@@ -5,7 +5,7 @@ class BLH_Manager {
 
     public static function init() {
         $helpers = [
-            'admin_bar_padding' => 'BLH_Admin_Bar_Padding',
+            'admin-bar-padding' => 'BLH_Admin_Bar_Padding',
         ];
 
         foreach ($helpers as $key => $class) {
