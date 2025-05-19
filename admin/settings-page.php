@@ -58,6 +58,16 @@ function blh_render_settings_page() {
                     <td><input type="checkbox" name="<?php echo $option_key; ?>[]" value="disable-self-pingbacks"
                         <?php checked(in_array('disable-self-pingbacks', $active_helpers)); ?>> Enable</td>
                 </tr>   
+				<tr>
+					<th>Force ACF JSON Save/Load in Theme</th>
+					<td><input type="checkbox" name="<?php echo $option_key; ?>[]" value="acf-json-in-theme"
+						<?php checked(in_array('acf-json-in-theme', $active_helpers)); ?>> Enable</td>
+				</tr>
+				<tr>
+					<th>Disable ACF Admin UI</th>
+					<td><input type="checkbox" name="<?php echo $option_key; ?>[]" value="disable-acf-admin"
+						<?php checked(in_array('disable-acf-admin', $active_helpers)); ?>> Enable</td>
+				</tr>
             </table>
             <?php submit_button(); ?>
         </form>

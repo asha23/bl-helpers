@@ -12,6 +12,8 @@ class BLH_Manager {
             'remove-rest-api-users' => 'BLH_Remove_REST_API_Users',
             'remove-login-errors' => 'BLH_Remove_Login_Errors',
             'disable-self-pingbacks' => 'BLH_Disable_Self_Pingbacks',
+            'acf-json-in-theme' => 'BLH_ACF_JSON_In_Theme',
+            'disable-acf-admin' => 'BLH_Disable_ACF_Admin',
         ];
 
         foreach ($helpers as $key => $class) {
