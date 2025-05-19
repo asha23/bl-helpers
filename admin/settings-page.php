@@ -13,12 +13,13 @@ function blh_render_settings_page() {
     $active_helpers = get_option($option_key, []);
     ?>
     <div class="wrap">
-        <h1>BL Helpers</h1>
+        <h1>BrightLocal Helpers</h1>
+		<p>This is a collection of useful helpers that would ordinarily live in <code>functions.php</code>. This keeps them theme independent.</p>
         <form method="post" action="options.php">
             <?php settings_fields('blh_options'); ?>
             <table class="form-table">
                 <tr>
-                    <th scope="row">Push content for admin bar</th>
+                    <th scope="row">Frontend Fix for Admin Bar</th>
                     <td>
                         <label>
                             <input type="checkbox" name="<?php echo $option_key; ?>[]" value="admin-bar-padding"
