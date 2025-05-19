@@ -2,31 +2,20 @@
 
 class BLH_Admin_Bar_Padding {
     public static function init() {
-        add_action('wp_head', [__CLASS__, 'add_admin_bar_css'], 100);
+        add_action('wp_footer', [__CLASS__, 'add_js_padding'], 100);
     }
 
-    public static function add_admin_bar_css() {
-        if (!is_admin_bar_showing()) {
-			echo "admin not showing";
-            return;
-        }
-
-        $admin_bar_height = is_admin() ? 0 : (wp_is_mobile() ? 46 : 32);
+    public static function add_js_padding() {
+        if (!is_admin_bar_showing()) return;
         ?>
-		admin showing.
-        <style id="bl-helpers-admin-bar-padding">
-            header {
-                top: 32px !important;
-            }
-			body {
-				margin-top: 32px !important;
-			}
-            @media screen and (max-width: 782px) {
-                body {
-                    margin-top: 46px !important;
-                }
-            }
-        </style>
+        <script id="bl-admin-bar-padding">
+        (function () {
+            const bar = document.getElementById('wpadminbar');
+            if (!bar) return;
+            const height = bar.offsetHeight;
+            document.body.style.marginTop = height + 'px';
+        })();
+        </script>
         <?php
     }
 }
