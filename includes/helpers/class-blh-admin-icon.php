@@ -29,8 +29,8 @@ class BLH_Admin_Icon {
         echo '<style>
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 32px;
+                height: 32px;
                 background-image: url("' . esc_url($icon_url) . '");
                 background-size: contain;
                 background-repeat: no-repeat;
