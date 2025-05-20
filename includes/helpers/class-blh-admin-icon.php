@@ -35,6 +35,8 @@ class BLH_Admin_Icon {
                 background-image: url("' . esc_url($icon_url) . '");
                 background-size: contain;
                 background-repeat: no-repeat;
+				position:relative;
+				left:-6px;
             }
         </style>';
     }
