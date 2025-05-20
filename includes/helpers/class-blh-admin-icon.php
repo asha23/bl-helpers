@@ -22,19 +22,35 @@ class BLH_Admin_Icon {
     public static function inject_site_icon_css() {
         $icon_url = get_site_icon_url(32);
 
-        if (!$icon_url) {
-            return;
-        }
+        ?>
+        <style>
+            /* Entire admin bar background and text */
+            #wpadminbar {
+                background-color: #0fd03b !important;
+                color: #000 !important;
+            }
 
-        echo '<style>
+            #wpadminbar .ab-item,
+            #wpadminbar .ab-label,
+            #wpadminbar a.ab-item {
+                color: #000 !important;
+            }
+
+            #wpadminbar .ab-icon:before,
+            #wpadminbar .ab-item:before {
+                color: #000 !important;
+            }
+
+            /* Replace WP logo icon */
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
-                width: 32px;
-                height: 32px;
-                background-image: url("' . esc_url($icon_url) . '");
+                width: 20px;
+                height: 20px;
+                background-image: url('<?php echo esc_url($icon_url); ?>');
                 background-size: contain;
                 background-repeat: no-repeat;
             }
-        </style>';
+        </style>
+        <?php
     }
 }
