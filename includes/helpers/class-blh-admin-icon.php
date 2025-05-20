@@ -36,7 +36,7 @@ class BLH_Admin_Icon {
                 background-size: contain;
                 background-repeat: no-repeat;
 				position:relative;
-				left:-6px;
+				left:-7px;
             }
         </style>';
     }
