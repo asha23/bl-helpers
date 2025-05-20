@@ -29,6 +29,11 @@ function blh_render_settings_page() {
                     </td>
                 </tr>
                 <tr>
+                    <th>Replace Admin Bar WP Logo with Site Icon</th>
+                    <td><input type="checkbox" name="<?php echo $option_key; ?>[]" value="admin-icon"
+                        <?php checked(in_array('admin-icon', $active_helpers)); ?>> Enable</td>
+                </tr>
+                <tr>
                     <th>Disable Heartbeat API</th>
                     <td><input type="checkbox" name="<?php echo $option_key; ?>[]" value="disable-heartbeat-api"
                         <?php checked(in_array('disable-heartbeat-api', $active_helpers)); ?>> Enable</td>

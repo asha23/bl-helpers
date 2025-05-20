@@ -14,6 +14,7 @@ class BLH_Manager {
             'disable-self-pingbacks' => 'BLH_Disable_Self_Pingbacks',
             'acf-json-in-theme' => 'BLH_ACF_JSON_In_Theme',
             'disable-acf-admin' => 'BLH_Disable_ACF_Admin',
+            'admin-icon' => 'BLH_Admin_Icon',
         ];
 
         foreach ($helpers as $key => $class) {
