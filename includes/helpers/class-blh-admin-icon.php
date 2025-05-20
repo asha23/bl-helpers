@@ -24,23 +24,7 @@ class BLH_Admin_Icon {
 
         ?>
         <style>
-            /* Entire admin bar background and text */
-            #wpadminbar {
-                background-color: #0fd03b !important;
-                color: #000 !important;
-            }
-
-            #wpadminbar .ab-item,
-            #wpadminbar .ab-label,
-            #wpadminbar a.ab-item {
-                color: #000 !important;
-            }
-
-            #wpadminbar .ab-icon:before,
-            #wpadminbar .ab-item:before {
-                color: #000 !important;
-            }
-
+        
             /* Replace WP logo icon */
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
