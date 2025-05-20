@@ -3,7 +3,8 @@
 class BLH_Admin_Icon {
     public static function init() {
         add_action('admin_bar_menu', [__CLASS__, 'replace_wp_logo'], 11);
-        add_action('admin_head', [__CLASS__, 'inject_site_icon_css']);
+        add_action('admin_head', [__CLASS__, 'inject_icon_css']);
+        add_action('wp_head', [__CLASS__, 'inject_icon_css']); // frontend admin bar
     }
 
     public static function replace_wp_logo($wp_admin_bar) {
@@ -19,25 +20,22 @@ class BLH_Admin_Icon {
         ]);
     }
 
-    public static function inject_site_icon_css() {
+    public static function inject_icon_css() {
         $icon_url = get_site_icon_url(32);
 
-        ?>
-        <style>
-        
-            /* Replace WP logo icon */
-		
+        if (!$icon_url) {
+            return;
+        }
+
+        echo '<style>
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
                 width: 32px;
                 height: 32px;
-                background-image: url('<?php echo esc_url($icon_url); ?>');
+                background-image: url("' . esc_url($icon_url) . '");
                 background-size: contain;
                 background-repeat: no-repeat;
-				position: relative;
-    			left: -6px;
             }
-        </style>
-        <?php
+        </style>';
     }
 }
