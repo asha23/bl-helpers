@@ -28,8 +28,8 @@ class BLH_Admin_Icon {
             /* Replace WP logo icon */
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 32px;
+                height: 32px;
                 background-image: url('<?php echo esc_url($icon_url); ?>');
                 background-size: contain;
                 background-repeat: no-repeat;
