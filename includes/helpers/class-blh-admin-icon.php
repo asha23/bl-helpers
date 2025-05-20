@@ -26,6 +26,7 @@ class BLH_Admin_Icon {
         <style>
         
             /* Replace WP logo icon */
+		
             #wp-admin-bar-site-icon-logo .site-icon-logo {
                 display: block;
                 width: 32px;
@@ -33,6 +34,8 @@ class BLH_Admin_Icon {
                 background-image: url('<?php echo esc_url($icon_url); ?>');
                 background-size: contain;
                 background-repeat: no-repeat;
+				position: relative;
+    			left: -6px;
             }
         </style>
         <?php
